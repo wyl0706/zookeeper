@@ -57,7 +57,7 @@ public class ClientCnxnSocketNIO extends ClientCnxnSocket {
 
     @Override
     boolean isConnected() {
-        return sockKey != null;
+        return sockKey !=null;
     }
     
     /**
