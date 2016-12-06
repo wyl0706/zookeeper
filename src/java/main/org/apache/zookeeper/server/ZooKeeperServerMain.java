@@ -24,6 +24,7 @@ import java.util.concurrent.TimeUnit;
 
 import javax.management.JMException;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.apache.zookeeper.jmx.ManagedUtil;
 import org.apache.zookeeper.server.admin.AdminServer;
 import org.apache.zookeeper.server.admin.AdminServer.AdminServerException;
@@ -57,6 +58,7 @@ public class ZooKeeperServerMain {
      * @param args the configfile or the port datadir [ticktime]
      */
     public static void main(String[] args) {
+        PropertyConfigurator.configure("conf//log4j.properties");
         ZooKeeperServerMain main = new ZooKeeperServerMain();
         try {
             main.initializeAndRun(args);
